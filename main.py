@@ -27,7 +27,6 @@ def predict(area: float, crop_year: int, season: str, crop: str, district: str):
         "District_Name": district
     }])
 
-    # Apply same preprocessing (get_dummies + column alignment)
     input_data = pd.get_dummies(input_data)
     input_data = input_data.reindex(columns=training_columns, fill_value=0)
 
